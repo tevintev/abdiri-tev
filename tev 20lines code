@@ -1,0 +1,18 @@
+# Initialize a new Git repository
+mkdir my_project
+cd my_project
+git init
+# Create a new file and commit it
+echo "Initial content" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+# Concurrency: Create a new branch and work on it
+git checkout -b feature_branch
+echo "Feature content" >> file.txt
+git add file.txt
+git commit -m "Added feature"
+# Synchronization: Merge changes from feature branch to main branch
+git checkout main
+git merge feature_branch
+# Version Control: Check the commit history
+git log
